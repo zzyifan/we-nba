@@ -1,0 +1,36 @@
+
+<!-- 赛程 -->
+<template name="item">
+  <view class="vip" wx:if="{{itemSub.ad}}">
+    {{itemSub.ad.tag}}
+  </view>
+  <view class="flex-wrp">
+    <view class="flex-col col-1">
+      <image class="team-logo" src="{{itemSub.leftBadge}}"></image>
+      <text class="team-name">{{itemSub.leftName}}</text>
+    </view>
+    <view class="flex-col col-2">
+      <text wx:if="{{itemSub.leftGoal == 0}}">-</text>
+      <text wx:else>{{itemSub.leftGoal}}</text>
+    </view>
+    <view class="flex-col col-3">
+      <text class="status" wx:if="{{itemSub.matchPeriod == 0}}">未开始</text>
+      <text class="status" wx:elif="{{itemSub.matchPeriod == 1}}">{{itemSub.quarter}}</text>
+      <text class="status" wx:else>已结束</text>
+    </view>
+  </view>
+  <view class="flex-wrp">
+    <view class="flex-col col-1">
+      <image class="team-logo" src="{{itemSub.rightBadge}}"></image>
+      <text class="team-name">{{itemSub.rightName}}</text>
+    </view>
+    <view class="flex-col col-2">
+      <text wx:if="{{itemSub.rightGoal == 0}}">-</text>
+      <text wx:else>{{itemSub.rightGoal}}</text>
+    </view>
+    <view class="flex-col col-3">
+      <text class="time" wx:if="{{itemSub.matchPeriod == 1}}">{{itemSub.quarterTime}}</text>
+      <text class="time" wx:else>{{itemSub.startTime}}</text>
+    </view>
+  </view>
+</template>

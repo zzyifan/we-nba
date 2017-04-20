@@ -1,0 +1,24 @@
+
+<!--page/schedule/schedule.wxml-->
+<import src="../template/item.wxml" />
+<view class="container">
+  <!--<scroll-view class="list" scroll-y="true" bindscrolltolower="loadMore" bindscrolltoupper="loadUp">-->
+  <view class="list">
+    <block wx:for="{{list}}" wx:for-item="item" wx:key="*this">
+      <view class="item-head">{{item.day}}</view>
+      <block wx:for="{{item.match}}" wx:for-item="itemSub" wx:key="*this">
+        <view class="item item-zhibo" wx:if="{{itemSub.matchPeriod == 1}}">
+          <template is="item" data="{{itemSub}}" />
+        </view>
+        <view class="item" wx:else>
+          <template is="item" data="{{itemSub}}" />
+        </view>
+      </block>
+    </block>
+
+    <view class="tips">
+      <view wx:if="{{hasMore}}">加载中...</view>
+      <view wx:else>没有更多内容了</view>
+    </view>
+  </view>
+</view>

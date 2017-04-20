@@ -1,0 +1,72 @@
+/* page/recommend/index.wxss */
+@import "../../app.wxss";
+
+.list {
+  height: 100vh;
+  /*height: 400px;*/
+}
+
+.item-head {
+  text-align: center;
+  line-height: 50rpx;
+  padding: 20rpx 0 10rpx;
+}
+
+.tips{
+  text-align:center;
+  padding:20rpx;
+}
+
+.item {
+  text-align: center;
+  background-color: #fff;
+  font-size: 30rpx;
+  line-height: 50rpx;
+  padding: 15rpx;
+  border: 1px solid #eee;
+  margin-top: -1px;
+}
+
+.vip {
+  text-align: left;
+  color: #ff8f17;
+  border-radius: 3px;
+  font-size: 24rpx;
+}
+
+.status {
+  color: #018ceb;
+  font-size: 24rpx;
+}
+
+.item-zhibo .col-2, .item-zhibo .col-3 {
+  color: #f00;
+}
+
+.team-logo {
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: middle;
+  margin-right: 5rpx;
+}
+
+.flex-wrp {
+  display: flex;
+}
+
+.flex-col {
+  width: 33%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.col-1 {
+  text-align: left;
+}
+
+.col-2 {
+}
+
+.col-3 {
+  text-align: right;
+}
